@@ -1,0 +1,49 @@
+.formWrapper {
+  width: 100%;
+  padding: 40px 0 0 0;
+}
+
+.input {
+  width: 458px;
+  height: 60px;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 26px;
+  font-weight: 500;
+  padding: 15px 18px;
+}
+
+.input:focus {
+  box-shadow: inset 0px 0px 0px 2.2px #1da347;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #c4c4c4;
+}
+
+.todoForm {
+  display: flex;
+  gap: 12px;
+}
+
+.inputButton {
+  background-image: url(../icons/icon_add.svg);
+  background-repeat: no-repeat;
+  background-position: 110px 18px;
+  width: 186px;
+  border-radius: 10px;
+  background-color: #1da347;
+  color: white;
+  font-size: 26px;
+  font-weight: 500;
+  border-style: none;
+  text-align: left;
+  padding-left: 60px;
+}
+
+.inputButton:hover {
+  background-color: #1f1f1f;
+  box-shadow: inset 0px 0px 0px 2px #1da347;
+  transition: all 0.2s ease-in-out;
+}

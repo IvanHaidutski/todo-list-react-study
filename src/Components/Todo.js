@@ -1,12 +1,11 @@
 import styles from "./Todo.module.css";
-import TodoForm from "./TodoForm";
+import listIcon from "../icons/icon_list.svg";
 
-function Todo() {
+function Todo({ index, todo, deleteTodo }) {
   return (
-    <div className={styles.todoWrapper}>
-      <h1 className={styles.titleTodo}>Todo App</h1>
-      <div className={styles.devider}></div>
-      <TodoForm />
+    <div className={styles.todoItem} onDoubleClick={(e) => deleteTodo(index)}>
+      <img src={listIcon} />
+      {todo}
     </div>
   );
 }

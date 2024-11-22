@@ -10,3 +10,50 @@
   padding: 15px 20px;
   margin-bottom: 15px;
 }
+
+.todoText {
+  width: 100%;
+  text-align: left;
+}
+
+.checkIcon,
+.deleteIcon {
+  width: 7%;
+  transition: transform 0.3s;
+}
+
+.checkIcon:hover,
+.deleteIcon:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.todoItem.completedTodo .checkIcon path,
+.todoItem.completedTodo .deleteIcon path,
+.todoItem.completedTodo .listIcon path {
+  fill: #c4c4c4;
+}
+
+.checkIcon:hover path {
+  fill: #1da347;
+}
+
+.checkIcon path {
+  fill: #c4c4c4;
+}
+
+.deleteIcon path {
+  fill: #c4c4c4;
+}
+
+.deleteIcon:hover path {
+  fill: tomato;
+}
+
+.listIcon {
+  width: 7%;
+}
+
+.listIcon path {
+  fill: #1da347;
+}

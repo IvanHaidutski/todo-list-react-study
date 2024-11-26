@@ -1,7 +1,6 @@
 {
   "name": "create-react-app",
   "version": "0.1.0",
-  "homepage": "https://ivanhaidutski.github.io/todo-list-react-study/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

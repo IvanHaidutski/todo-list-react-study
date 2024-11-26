@@ -21,3 +21,8 @@
   transform: scale(1.04);
   transition: all 0.2s ease-in-out;
 }
+
+.buttonAction:disabled {
+  background-color: #1f1f1f;
+  box-shadow: inset 0px 0px 0px 2px #52525b;
+}

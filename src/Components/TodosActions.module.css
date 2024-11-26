@@ -20,3 +20,7 @@
 .deleteAllIcon path {
   fill: white;
 }
+
+.deleteAllIconDisabled path {
+  fill: #52525b;
+}

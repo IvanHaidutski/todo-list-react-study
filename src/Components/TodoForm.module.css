@@ -1,7 +1,7 @@
 .formWrapper {
   width: 100%;
   padding: 40px 0 0 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .input {
@@ -29,6 +29,7 @@
 }
 
 .inputButton {
+  cursor: pointer;
   background-image: url(../icons/icon_add.svg);
   background-repeat: no-repeat;
   background-position: 110px 18px;
@@ -47,4 +48,9 @@
   background-color: #1f1f1f;
   box-shadow: inset 0px 0px 0px 2px #1da347;
   transition: all 0.2s ease-in-out;
+}
+
+.inputButton:active {
+  transform: scale(1.04);
+  transition: all 0.1s ease-in-out;
 }

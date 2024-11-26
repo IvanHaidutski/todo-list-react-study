@@ -1,13 +1,14 @@
 import styles from "./TodoList.module.css";
 import Todo from "./Todo";
 
-function TodoList({ todos, deleteTodo }) {
+function TodoList({ todos, deleteTodo, toggleTodo }) {
   return todos.map((todo) => (
     <Todo
       key={todo.id}
-      todo={todo.text}
-      index={todo.id}
+      todo={todo}
+      id={todo.id}
       deleteTodo={deleteTodo}
+      toggleTodo={toggleTodo}
     />
   ));
 }

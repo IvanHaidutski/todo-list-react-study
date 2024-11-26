@@ -31,7 +31,13 @@
 .todoItem.completedTodo .checkIcon path,
 .todoItem.completedTodo .deleteIcon path,
 .todoItem.completedTodo .listIcon path {
-  fill: #c4c4c4;
+  fill: #52525b;
+}
+
+.todoItem.completedTodo {
+  background-color: unset;
+  border: 1.8px solid #52525b;
+  color: #52525b;
 }
 
 .checkIcon:hover path {

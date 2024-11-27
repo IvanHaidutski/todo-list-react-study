@@ -7,11 +7,12 @@ import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [todos, setTodos] = useState([]);
-  const toDoHandler = (text) => {
+  const toDoHandler = (text, order) => {
     const newTodo = {
       id: uuidv4(),
       text: text,
       isCompleted: false,
+      order: order,
     };
     console.log(newTodo);
     setTodos([...todos, newTodo]);
@@ -46,6 +47,38 @@ function App() {
 
   const completedTodosCount = todos.filter((todo) => todo.isCompleted).length;
 
+  const [currentTodo, setCurrentTodo] = useState(null);
+
+  function dragStartHandler(e, todo) {
+    console.log("drag", todo);
+    setCurrentTodo(todo);
+  }
+
+  function dragEndHandler(e) {
+    // e.target.style.background = "white";
+  }
+
+  function dragOverHandler(e) {
+    e.preventDefault();
+    // e.target.style.background = "tomato";
+  }
+
+  function dropHandler(e, todo) {
+    e.preventDefault();
+    console.log("drop", todo);
+    setTodos(
+      todos.map((c) => {
+        if (c.id === todo.id) {
+          return { ...c, order: currentTodo.order };
+        }
+        if (c.id === currentTodo.id) {
+          return { ...c, order: todo.order };
+        }
+        return c;
+      })
+    );
+  }
+
   return (
     <div className="App">
       <div className="todoWrapper">
@@ -66,6 +99,10 @@ function App() {
             todos={todos}
             deleteTodo={deleteDoHandler}
             toggleTodo={toggleDoHandler}
+            dragStartHandler={dragStartHandler}
+            dragEndHandler={dragEndHandler}
+            dragOverHandler={dragOverHandler}
+            dropHandler={dropHandler}
           />
         )}
         {completedTodosCount > 0 && (

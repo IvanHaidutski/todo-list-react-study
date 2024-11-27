@@ -2,12 +2,14 @@ import { useState } from "react";
 import styles from "./TodoForm.module.css";
 
 function TodoForm({ addTodo }) {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
+  const [order, setOrder] = useState(1);
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    addTodo(text);
-    setText('');
+    addTodo(text, order);
+    setText("");
+    setOrder(order + 1);
   };
 
   return (
